@@ -6,7 +6,6 @@ import {motion} from "framer-motion"
 import HomeButton from '../components/HomeButton'
 import Logo from '../components/Logo'
 import SocialLinks from '../components/SocialLinks'
-import { YinYang } from '../components/SVG_Components'
 import Intro from '../components/Intro'
 
 function Main() {
@@ -27,50 +26,43 @@ function Main() {
         <DarkDiv click = {click}/>
 
         <Center click = {click}>
-          <YinYang onClick = {handleClick} width = {click? 100:200} height = {click? 100:200} fill = "currentColor"/>
+          <div onClick = {handleClick} click = {click}>
+            ?
+          </div>
           <span>Click Here</span>
         </Center>
 
         <Contact to = "/contact">
           <motion.h3
-            whileHover = {{scale: 1.1}}
+            whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
             whileTap = {{scale: 0.9}}
           >
             Get In Touch...
           </motion.h3>
         </Contact>
 
-        <Experience to = "/">
+        <Experience to = "/mywork">
           <motion.h3
-            whileHover = {{scale: 1.1}}
-            whileTap = {{scale: 0.9}}
-          >
-            Experience
-          </motion.h3>
-        </Experience>
-        
-        <Work click = {click} to = "/projects">
-          <motion.h3
-            whileHover = {{scale: 1.1}}
+            whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
             whileTap = {{scale: 0.9}}
           >
             My Work
           </motion.h3>
-        </Work>
+        </Experience>
 
         <BottomBar>
           <About click = {click} to = "/about">
             <motion.h3
-              whileHover = {{scale: 1.1}}
+              whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
               whileTap = {{scale: 0.9}}
             >
               About
             </motion.h3>
           </About>
 
-          <Skills>
+          <Skills to = "/skills">
             <motion.h3
-              whileHover = {{scale: 1.1}}
+              whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
               whileTap = {{scale: 0.9}}
             >
               Skills
@@ -123,22 +115,6 @@ const Experience = styled(NavLink)`
   transform: rotate(90deg) translate(-50%,-50%);
   text-decoration: none;
   z-index: 1;
-  /* font-family: "Karla",sans-serif; */
-  font-size: 1rem;
-  font-weight: 600;
-`
-
-const Work = styled(NavLink)`
-  color: ${props => props.click? props.theme.body:props.theme.text};
-  position: absolute;
-  top: 2rem;
-  top: 45%;
-  left: 1rem;
-  transform: rotate(-90deg) translate(-50%,-50%);
-  transform-origin:center;
-  text-decoration: none;
-  z-index: 1;
-  /* font-family: "Karla",sans-serif; */
   font-size: 1rem;
   font-weight: 600;
 `
@@ -166,12 +142,17 @@ const Skills = styled(NavLink)`
   z-index: 1;
 `
 
-const rotate = keyframes`
-  from{
-    transform: rotate(0);
+const pulse = keyframes`
+  0% {
+    transform: scale(0.9);
   }
-  to{
-    transform: rotate(360deg);
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(39, 39, 39, 0);
+  }
+    100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(39, 39, 39, 0);
   }
 `
 
@@ -193,12 +174,24 @@ const Center = styled.button`
   transition: all 1s ease;
 
   &>:last-child {
-    /* padding-top: 1rem; */
     display: ${props => props.click? "none":"inline-block"};
+    font-size: 1.2rem;
+    font-style: italic;
   }
 
   &>:first-child {
-    animation: ${rotate} infinite 1.5s linear;
+    display: block;
+    line-height: ${props => props.click? "80px":"150px"};
+    width: ${props => props.click? "80px":"150px"};
+    height: ${props => props.click? "80px":"150px"};
+    font-size: ${props => props.click? "2rem":"4rem"};
+    border-radius: 50%;
+    background: #272727;
+    color: #EFFFFB;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(39, 39, 39, 0.5);
+    /* box-shadow: 0 0 0 0 rgba(#272727, 0.5); */
+    animation: ${pulse} 1.5s infinite;
   }
 `
 
@@ -207,7 +200,7 @@ const DarkDiv = styled.div`
   top: 0;
   bottom: 0;
   right: 50%;
-  background-color: black;
+  background-color: #272727;
   width: ${props => props.click? "50%":"0%"};
   height: ${props => props.click? "100%":"0%"};
   z-index: 1;

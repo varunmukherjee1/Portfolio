@@ -18,10 +18,8 @@ const Power = styled.button`
     left: 50%;
     transform: translateX(-50%);
 
-    background-color: #fcf6f4;
+    background-color: #EFFFFB;
     padding: 0.3rem;
-    /* border-radius: 50%; */
-    /* border: 1px solid #000; */
     border: none;
     width: 2.8rem;
     font-size: 2.4rem;
@@ -40,7 +38,7 @@ const Power = styled.button`
 
     &>*:first-child{
         text-decoration: none;
-        color: black;
+        color: #272727;
         transition: all 1s;
     }
 `
