@@ -6,6 +6,7 @@ import Logo from '../components/Logo'
 import HomeButton from '../components/HomeButton'
 import SocialLinks from '../components/SocialLinks'
 import ParticlesComp from '../components/ParticlesComp'
+import WaterMark from "../components/WaterMark"
 
 import skills from "../Assets/Data/skills"
 
@@ -20,6 +21,7 @@ function Skills() {
       <HomeButton/>
       <SocialLinks/>
       <ParticlesComp theme = "light"/>
+      <WaterMark text = "SKILLS" top = "1rem" right = "5%"/>
 
       <Box>
         <div>

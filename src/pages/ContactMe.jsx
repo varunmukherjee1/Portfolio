@@ -57,7 +57,7 @@ function ContactMe() {
 
       <Box
         initial = {{height: 0}}
-        animate = {{height: "63vh"}}
+        animate = {{height: "auto"}}
         transition = {{type: "spring", duration: 1.5, delay: 0}}
       >
 
@@ -123,7 +123,10 @@ const Box = styled(motion.div)`
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
-    gap: 9px;
+  }
+
+  form>div label {
+    margin-bottom: 9px;
   }
 
   form>div input,

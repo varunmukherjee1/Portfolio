@@ -14,7 +14,11 @@ function Intro() {
         transition = {{type: "spring", duration: 2, delay: 1}}
     >
         <SubBox>
-            <Text>
+            <Text
+                initial = {{opacity: 0}}
+                animate = {{opacity: 1}}
+                transition = {{type: "spring",duration: 0.5, delay: 1.5}}
+            >
                 <h1>Hi,</h1>
                 <h3>I'm Varun Mukherjee</h3>
                 <h6>
@@ -30,9 +34,14 @@ function Intro() {
 
             </Text>
             
-            <div className = "button-container">
+            <motion.div 
+                className = "button-container"
+                initial = {{opacity: 0}}
+                animate = {{opacity: 1}}
+                transition = {{type: "spring",duration: 0.5, delay: 1.5}}
+            >
                 <a href="https://drive.google.com/file/d/1Iwsms-cnnLOFmafSZbuhcvsOUfmgqZ9L/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
-            </div>
+            </motion.div>
         </SubBox>
         <SubBox>
             <motion.div
@@ -126,7 +135,7 @@ const SubBox = styled.div`
     }
 `
 
-const Text = styled.div`
+const Text = styled(motion.div)`
     font-size: calc(1em + 1.5vw);
     color: ${props => props.theme.body};
     padding: 2rem;

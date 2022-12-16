@@ -7,6 +7,7 @@ import SocialLinks from '../components/SocialLinks';
 import HomeButton from '../components/HomeButton';
 import Project from '../components/Project';
 import Job from '../components/Job';
+import WaterMark from '../components/WaterMark';
 
 import myWork from '../Assets/Data/myWork';
 // import spinner from "../Assets/Images/spinner.png"
@@ -30,6 +31,8 @@ function MyWork() {
       <Logo />
       <HomeButton />
       <SocialLinks />
+      <WaterMark text = "WORK" top = "72%" left = "5rem"/>
+
       <Tabs>
         <Header>
           <h3
