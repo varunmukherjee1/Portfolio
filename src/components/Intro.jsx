@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import Typewriter from 'typewriter-effect';
 import {motion} from "framer-motion"
 
-import myPic from "../Assets/Images/profile-img.png"
+// import myPic from "../Assets/Images/profile-img.png"
+import myPic_1 from "../Assets/Images/my_pic.png"
 
 function Intro() {
   return (
@@ -14,9 +16,23 @@ function Intro() {
         <SubBox>
             <Text>
                 <h1>Hi,</h1>
-                <h3>I'm CodeBucks</h3>
-                <h6>I design & Code simple yet beautiful websites</h6>
+                <h3>I'm Varun Mukherjee</h3>
+                <h6>
+                    <div>I am,</div>
+                    <Typewriter
+                        options={{
+                            strings: ['MERN Stack Developer', 'Web 3 Enthusiast'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                </h6>
+
             </Text>
+            
+            <div className = "button-container">
+                <a href="https://drive.google.com/file/d/1Iwsms-cnnLOFmafSZbuhcvsOUfmgqZ9L/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
+            </div>
         </SubBox>
         <SubBox>
             <motion.div
@@ -24,7 +40,7 @@ function Intro() {
                 animate = {{opacity: 1}}
                 transition = {{duration: 1, delay: 2}}
             >
-                <img src={myPic} className = "pic" alt="Profile Pic" />
+                <img src={myPic_1} className = "pic" alt="Profile Pic" />
             </motion.div>
         </SubBox>
     </Box>
@@ -65,6 +81,8 @@ const SubBox = styled.div`
     width: 50%;
     position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .pic{
         position: absolute;
@@ -73,6 +91,35 @@ const SubBox = styled.div`
         transform: translate(-50%,0%);
         width: 100%;
         height: auto;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-container a {
+        text-decoration: none;
+        color: ${props => props.theme.text};
+        background-color: ${props => props.theme.body};
+        padding: 8px 1rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        transition: all 0.8s;
+    }
+
+    .button-container a:hover {
+        background-color: ${props => props.theme.text};
+        color: ${props => props.theme.body};
+        transform: scale(1.1);
+    }
+
+    &>*:first-child{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 `
 
@@ -88,8 +135,14 @@ const Text = styled.div`
 
     &>*:last-child{
         color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};
-        font-weight: 300;
+        font-weight: 500;
         font-size: calc(0.5rem + 1.5vw);
+        display: flex;
+        gap: 3px;
+    }
+
+    h6>div:last-child {
+        color: #8296e1;
     }
 
 `

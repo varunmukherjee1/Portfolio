@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { darkTheme } from '../styled/themes'
+// import { darkTheme } from '../styled/themes'
 
 function HomeButton(props) {
   return (
@@ -19,11 +19,13 @@ const Power = styled.button`
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 48%;
 
     background-color: ${props => (props.color === "dark")? "#272727":"#EFFFFB"};
     padding: 0.3rem;
+    /* border: 3px solid #272727; */
     border: none;
-    width: 2.8rem;
+    /* width: 2.8rem; */
     font-size: 2.4rem;
     height: 2.8rem;
     display: flex;
@@ -36,11 +38,12 @@ const Power = styled.button`
 
     &>* i {
         color: ${props => (props.color === "dark")? "#EFFFFB":"#272727"};
+        transition: all 0.5s;
         /* color: #effffb; */
     }
 
-    &:hover i {
-        transform: scale(1.05);
+    &:hover i{
+        transform: scale(1.09);
     }
 
     &>*:first-child{

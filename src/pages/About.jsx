@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, {keyframes, ThemeProvider } from 'styled-components'
-import { motion, transform } from 'framer-motion'
+import { motion} from 'framer-motion'
 
 import Logo from '../components/Logo'
 import SocialLinks from '../components/SocialLinks'
@@ -29,11 +29,13 @@ function About() {
         </Gif>
 
         <Box>
-          I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+          I'm a Full Stack (MERN) Developer located in India. I love to create simple yet beautiful websites.
           <br /><br />
-          I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
+          I'm interested in the whole web development Like learning and trying new things and building great projects. I love to watch Anime 😅 and read Books.
           <br /><br />
-          I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+          I believe in always trying to be better than yesterday working hard, learning new tech stacks working with them, and always looking for opportunities to upskill myself.
+          <br />
+          "🚩 Better Than Yesterday"
         </Box>
 
         <WaterMark text = "ABOUT" top = "7%" left = "7%"/>
@@ -56,7 +58,7 @@ const float = keyframes`
   100% { transform: translateY(-10px) }
 `
 
-const Gif = styled.div`
+const Gif = styled(motion.div)`
   position: absolute;
   top: 10%;
   right: 5%;
