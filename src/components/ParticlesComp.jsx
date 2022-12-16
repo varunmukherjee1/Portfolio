@@ -15,7 +15,7 @@ function ParticlesComp(props) {
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        const temp = await container
+        await console.log(container)
     }, []);
 
     return (
