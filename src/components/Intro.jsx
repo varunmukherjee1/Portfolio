@@ -82,14 +82,14 @@ const SubBox = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
     .pic{
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translate(-50%,0%);
-        width: 100%;
+        width: 85%;
         height: auto;
     }
 
@@ -102,16 +102,19 @@ const SubBox = styled.div`
         text-decoration: none;
         color: ${props => props.theme.text};
         background-color: ${props => props.theme.body};
-        padding: 8px 1rem;
+        padding: 10px 2.2rem;
         font-size: 1.3rem;
         font-weight: bold;
         margin-bottom: 1rem;
-        border-radius: 1rem;
-        transition: all 0.8s;
+        border-radius: 6px;
+        transition: all 0.5s;
+        margin-top: 1.6rem;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
+
     }
 
     .button-container a:hover {
-        background-color: ${props => props.theme.text};
+        background-color: #343434;
         color: ${props => props.theme.body};
         transform: scale(1.1);
     }

@@ -66,7 +66,7 @@ const Box = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 
   &>div h3 {
     display: block;

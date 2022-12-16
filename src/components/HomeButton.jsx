@@ -19,15 +19,13 @@ const Power = styled.button`
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 48%;
+    border-radius: 50%;
 
     background-color: ${props => (props.color === "dark")? "#272727":"#EFFFFB"};
-    padding: 0.3rem;
-    /* border: 3px solid #272727; */
+    padding: 0.45rem;
     border: none;
-    /* width: 2.8rem; */
-    font-size: 2.4rem;
-    height: 2.8rem;
+    font-size: 2.2rem;
+    height: 3.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,11 +37,10 @@ const Power = styled.button`
     &>* i {
         color: ${props => (props.color === "dark")? "#EFFFFB":"#272727"};
         transition: all 0.5s;
-        /* color: #effffb; */
     }
 
     &:hover i{
-        transform: scale(1.09);
+        transform: scale(1.1);
     }
 
     &>*:first-child{
