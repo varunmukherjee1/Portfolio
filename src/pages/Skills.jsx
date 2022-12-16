@@ -61,24 +61,34 @@ const Box = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,calc(-50% + 25px));
   width: 70vw;
 
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
+
+  &>div {
+    /* background: transparent; */
+    border: 3px solid #8296e1;
+    padding: 12px 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px rgba(130, 150, 225, 0.47);
+    background: #ffffff94;
+    backdrop-filter: blur(9px);
+  }
 
   &>div h3 {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     font-size: 1.4rem;
     font-family: "Ubuntu Mono",monospace;
   }
 
   &>div img {
-    height: 60px;
+    height: 50px;
     object-fit: cover;
-    margin: 0 0.8rem;
+    margin: 0 1.5rem;
   }
 `
 

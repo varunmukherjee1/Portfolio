@@ -107,7 +107,7 @@ const Box = styled(motion.div)`
   transform: translate(-50%,-50%);
   border: 3px solid ${props => props.theme.text};
   width: 60vw;
-  height: 63vh;
+  /* height: auto; */
   border-radius: 10px;
   padding: 1.3rem;
   background-color: #fff;
@@ -119,25 +119,26 @@ const Box = styled(motion.div)`
     font-size: 1.3rem;
   }
 
-  form div {
+  form>div {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
     gap: 9px;
-    /* align-items: flex-start; */
   }
 
-  form div input,
-  form div textarea{
+  form>div input,
+  form>div textarea{
     font-size: 1.3rem;
     padding: 3px 5px;
     font-family: "Ubuntu Mono",monospace;
   }
 
-  button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  form>button {
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: block;
+    /* width: 100%; */
     cursor: pointer;
     outline: none;
     font-size: 1.5rem;
@@ -149,6 +150,7 @@ const Box = styled(motion.div)`
     letter-spacing: 2px;
     border-radius: 10px;
     border: 3px solid transparent;
+    margin: auto;
   }
 
   button:hover {
