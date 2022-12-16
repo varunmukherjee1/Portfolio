@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import {motion} from "framer-motion"
 
 import Logo from '../components/Logo'
 import SocialLinks from '../components/SocialLinks'
@@ -24,7 +25,11 @@ function MyWork() {
     }
 
     return (
-        <Container>
+        <Container
+            variants={container}
+            initial = "hidden"
+            animate = "show"
+        >
             <Logo/>
             <HomeButton/>
             <SocialLinks/>
@@ -53,7 +58,7 @@ function MyWork() {
     )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -93,25 +98,38 @@ const Header = styled.div`
     }
 `
 
-const Body = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    /* border: 2px solid red; */
-    height: 82vh;
+const Body = styled.ul`
+    height: 75vh;
+    /* width: 80vw; */
     overflow: scroll;
     padding: 1rem;
+    display: flex;
+    width: auto;
+    /* flex-direction: row; */
+    /* gap: 2rem; */
+    /* flex-grow: 1; */    
 
     &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &>*:nth-child(even){
-        align-self: flex-end;
-        flex-direction: row-reverse;
-        /* justify-content: space-between; */
+        /* display: none; */
     }
 
 `
+
+// Framer-motion config
+const container = {
+    hidden: {
+      opacity: 0,
+      x:"100%",
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+  
+      transition: {
+        staggerChildren: 0.5,
+        duration: 0.5
+      }
+    }
+  }
 
 export default MyWork

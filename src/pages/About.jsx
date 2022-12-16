@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, {keyframes, ThemeProvider } from 'styled-components'
+import { motion, transform } from 'framer-motion'
 
 import Logo from '../components/Logo'
 import SocialLinks from '../components/SocialLinks'
@@ -13,7 +14,11 @@ import graphic from "../Assets/Images/spaceman.png"
 function About() {
   return (
     <ThemeProvider theme = {darkTheme}>
-      <Container>
+      <Container
+        variants={container}
+        initial = "hidden"
+        animate = "show"
+      >
         <Logo color = "dark"/>
         <SocialLinks color = "dark"/>
         <HomeButton color = "dark"/>
@@ -38,7 +43,7 @@ function About() {
   )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   background-color: ${props => props.theme.body};
   height: 100vh;
   width: 100vw;
@@ -79,5 +84,23 @@ const Box = styled.div`
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 `
+
+// Framer-motion config
+const container = {
+  hidden: {
+    opacity: 0,
+    y: "100%"
+    
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5
+    }
+  }
+}
 
 export default About

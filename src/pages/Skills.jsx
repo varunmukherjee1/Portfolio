@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {motion} from "framer-motion"
 
 import Logo from '../components/Logo'
 import HomeButton from '../components/HomeButton'
@@ -10,7 +11,11 @@ import skills from "../Assets/Data/skills"
 
 function Skills() {
   return (
-    <Container>
+    <Container
+      variants={container}
+      initial = "hidden"
+      animate = "show"
+    >
       <Logo/>
       <HomeButton/>
       <SocialLinks/>
@@ -46,7 +51,7 @@ function Skills() {
   )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -76,5 +81,22 @@ const Box = styled.div`
     margin: 0 0.8rem;
   }
 `
+
+// Framer-motion config
+const container = {
+  hidden: {
+    opacity: 0,
+    y: "100%"
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5
+    }
+  }
+}
 
 export default Skills

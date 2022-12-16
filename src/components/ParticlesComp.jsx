@@ -10,12 +10,12 @@ import config_light from "../Assets/Config/particlejs-config-light"
 function ParticlesComp(props) {
 
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
+        // console.log(engine);
         await loadFull(engine);
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        await console.log(container);
+        const temp = await container
     }, []);
 
     return (

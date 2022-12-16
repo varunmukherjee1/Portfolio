@@ -7,6 +7,7 @@ import HomeButton from '../components/HomeButton'
 import Logo from '../components/Logo'
 import SocialLinks from '../components/SocialLinks'
 import Intro from '../components/Intro'
+import mainImg from "../Assets/Images/domain.png"
 
 function Main() {
 
@@ -17,7 +18,11 @@ function Main() {
   }
 
   return (
-    <MainContainer>
+    <MainContainer
+      variants={container}
+      initial = "hidden"
+      animate = "show"
+    >
       <Container>
         <HomeButton/>
         <Logo color = {click? "dark":"light"}/>
@@ -27,14 +32,22 @@ function Main() {
 
         <Center click = {click}>
           <div onClick = {handleClick} click = {click}>
-            ?
+            <img src={mainImg} alt="Img" />
           </div>
           <span>Click Here</span>
         </Center>
 
         <Contact to = "/contact">
           <motion.h3
-            whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
+            initial = {{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1}
+            }}
+            animate = {{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1}
+            }}
+            whileHover = {{scale: 1.1, fontWeight: 700, color: "#4F98CA"}}
             whileTap = {{scale: 0.9}}
           >
             Get In Touch...
@@ -43,7 +56,15 @@ function Main() {
 
         <Experience to = "/mywork">
           <motion.h3
-            whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
+            initial = {{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1}
+            }}
+            animate = {{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1}
+            }}
+            whileHover = {{scale: 1.1, fontWeight: 700, color: "#4F98CA"}}
             whileTap = {{scale: 0.9}}
           >
             My Work
@@ -53,7 +74,15 @@ function Main() {
         <BottomBar>
           <About click = {click} to = "/about">
             <motion.h3
-              whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
+              initial = {{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1}
+              }}
+              animate = {{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1}
+              }}
+              whileHover = {{scale: 1.1, fontWeight: 700, color: "#4F98CA"}}
               whileTap = {{scale: 0.9}}
             >
               About
@@ -62,7 +91,15 @@ function Main() {
 
           <Skills to = "/skills">
             <motion.h3
-              whileHover = {{scale: 1.1, fontWeight: "bold", color: "#4F98CA"}}
+              initial = {{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1}
+              }}
+              animate = {{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1}
+              }}
+              whileHover = {{scale: 1.1, fontWeight: 700, color: "#4F98CA"}}
               whileTap = {{scale: 0.9}}
             >
               Skills
@@ -77,7 +114,7 @@ function Main() {
   )
 }
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background: ${props => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -102,7 +139,7 @@ const Contact = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
   /* font-family: "Karla",sans-serif; */
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
 `
 
@@ -115,7 +152,7 @@ const Experience = styled(NavLink)`
   transform: rotate(90deg) translate(-50%,-50%);
   text-decoration: none;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
 `
 
@@ -133,12 +170,14 @@ const BottomBar = styled.div`
 const About = styled(NavLink)`
   color: ${props => props.click? props.theme.body:props.theme.text};
   text-decoration: none;
+  font-size: 1.3rem;
   z-index: 1;
 `
 
 const Skills = styled(NavLink)`
   color: ${props => props.theme.text};
   text-decoration: none;
+  font-size: 1.3rem;
   z-index: 1;
 `
 
@@ -181,10 +220,13 @@ const Center = styled.button`
 
   &>:first-child {
     display: block;
-    line-height: ${props => props.click? "80px":"150px"};
+    /* line-height: ${props => props.click? "80px":"150px"}; */
     width: ${props => props.click? "80px":"150px"};
     height: ${props => props.click? "80px":"150px"};
     font-size: ${props => props.click? "2rem":"4rem"};
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background: #272727;
     color: #EFFFFB;
@@ -192,6 +234,10 @@ const Center = styled.button`
     box-shadow: 0 0 0 0 rgba(39, 39, 39, 0.5);
     /* box-shadow: 0 0 0 0 rgba(#272727, 0.5); */
     animation: ${pulse} 1.5s infinite;
+  }
+
+  &>:first-child img {
+    width: 95%;
   }
 `
 
@@ -207,5 +253,20 @@ const DarkDiv = styled.div`
   transition: height 0.5s ease,
               width 1s ease 0.5s;
 `
+
+// Framer-motion config
+const container = {
+  hidden: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5
+    }
+  }
+}
 
 export default Main

@@ -36,7 +36,11 @@ function ContactMe() {
   };
 
   return (
-    <Container>
+    <Container
+      variants={container}
+      initial = "hidden"
+      animate = "show"
+    >
 
       <Logo/>
       <SocialLinks/>
@@ -78,7 +82,7 @@ function ContactMe() {
   )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   position: relative;
   top: 0;
   left: 0;
@@ -151,5 +155,20 @@ const Box = styled(motion.div)`
     border-color: #272727;
   }
 `
+
+// Framer-motion config
+const container = {
+  hidden: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5
+    }
+  }
+}
 
 export default ContactMe

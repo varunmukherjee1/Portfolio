@@ -23,28 +23,29 @@ function Project(props) {
 
 const Card = styled.div`
 
-    /* border: 2px solid green; */
+    border: 2px solid green;
     border-radius: 8px;
     overflow: hidden;
-    display: flex;
-    width: 600px;
-    min-width: 300px;
+    display: block;
+    width: 400px;
+    height: 500px;
+    /* min-width: 300px; */
     gap: 1rem;
-    padding: 5px;
+    padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     justify-content: space-between;
     /* padding: 8px; */
 
     &>*:first-child {
-        width: 250px;
-        height: 150px;
-        overflow: hidden;
+        width: 100%;
+        height: 300px;
+        /* overflow: hidden; */
         display: inline-block;
     }
 
     &>*:first-child img {
-        width: 250px;
-        height: 150px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 `
