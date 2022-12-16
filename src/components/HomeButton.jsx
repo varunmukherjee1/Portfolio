@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-function HomeButton() {
+import { darkTheme } from '../styled/themes'
+
+function HomeButton(props) {
   return (
-    <Power>
+    <Power color = {props.color}>
         <Link to = "/">
             <i className ="fa-solid fa-house"></i>
         </Link>
@@ -18,7 +20,7 @@ const Power = styled.button`
     left: 50%;
     transform: translateX(-50%);
 
-    background-color: #EFFFFB;
+    background-color: ${props => (props.color === "dark")? "#272727":"#EFFFFB"};
     padding: 0.3rem;
     border: none;
     width: 2.8rem;
@@ -31,6 +33,11 @@ const Power = styled.button`
 
     cursor: pointer;
     transition: all 0.5s;
+
+    &>* i {
+        color: ${props => (props.color === "dark")? "#EFFFFB":"#272727"};
+        /* color: #effffb; */
+    }
 
     &:hover i {
         transform: scale(1.05);
