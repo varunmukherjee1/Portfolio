@@ -14,9 +14,12 @@ import css from "../Images/css-3.png"
 import node from "../Images/node.png"
 import python from "../Images/python.png"
 import js from "../Images/js.png"
+import sass from "../Images/sass.png"
+import nextjs from "../Images/nextjs.png"
+import bootstrap from "../Images/bootstrap.png"
 
-const languages =[js,c_cpp,sql,java,git,html,css,python]
-const lib = [node,react,redux]
+const languages =[js,c_cpp,sql,java,git,html,css,python,sass]
+const lib = [node,react,redux,bootstrap,nextjs]
 const tools = [github,solr,vsc]
 const database = [mysql,mongo]
 
