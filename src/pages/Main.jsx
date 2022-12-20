@@ -136,9 +136,8 @@ const Contact = styled(NavLink)`
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
-  text-decoration: none;
+  /* text-decoration: none; */
   z-index: 1;
-  /* font-family: "Karla",sans-serif; */
   font-size: 1.3rem;
   font-weight: 600;
 `
@@ -158,7 +157,7 @@ const Experience = styled(NavLink)`
 
 const BottomBar = styled.div`
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 0;
   right: 0;
   width: 100%;

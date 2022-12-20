@@ -24,30 +24,30 @@ function Skills() {
       <WaterMark text = "SKILLS" top = "1rem" right = "5%"/>
 
       <Box>
-        <div>
+        <motion.div variants = {Item}>
           <h3>Languages :</h3>
           {skills.languages.map((icon,id) => (
             <img src= {icon} alt="lang" key = {id}/>
           ))}
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants = {Item}>
           <h3>Framewords / Libraries</h3>
           {skills.lib.map((icon,id) => (
             <img src= {icon} alt="lang" key = {id}/>
           ))}
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants = {Item}>
           <h3>Tools :</h3>
           {skills.tools.map((icon,id) => (
             <img src= {icon} alt="lang" key = {id}/>
           ))}
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants = {Item}>
           <h3>Database :</h3>
           {skills.database.map((icon,id) => (
             <img src= {icon} alt="lang" key = {id}/>
           ))}
-        </div>
+        </motion.div>
       </Box>
     </Container>
   )
@@ -61,10 +61,18 @@ const Container = styled(motion.div)`
 
 const Box = styled.div`
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
-  transform: translate(-50%,calc(-50% + 25px));
+  top: 12%;
+  transform: translate(-50%);
   width: 70vw;
+  height: 86vh;
+  overflow: scroll;
+  padding: 6px;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 
   display: flex;
   flex-direction: column;
@@ -108,6 +116,20 @@ const container = {
       staggerChildren: 0.5,
       duration: 0.5
     }
+  }
+}
+
+const Item = {
+  hidden:{
+      scale:0
+  },
+  show:{
+      scale:1,
+      transition: {
+          type: 'spring',
+          duration: 0.5,
+          dealy: 1
+      }
   }
 }
 

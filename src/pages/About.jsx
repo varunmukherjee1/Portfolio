@@ -33,7 +33,7 @@ function About() {
           <br /><br />
           I'm interested in the whole web development Like learning and trying new things and building great projects. I love to watch Anime 😅 and read Books.
           <br /><br />
-          I believe in always trying to be better than yesterday working hard, learning new tech stacks working with them, and always looking for opportunities to upskill myself.
+          I believe in always trying to be better than yesterday, working hard, learning new tech stacks working with them, and always looking for opportunities to upskill myself.
           <br />
           "🚩 Better Than Yesterday"
         </Box>
@@ -64,6 +64,10 @@ const Gif = styled(motion.div)`
   right: 5%;
   width: 20vw;
   animation: ${float} 4s ease infinite;
+
+  img {
+    width: 100%;
+  }
 `
 
 const Box = styled.div`

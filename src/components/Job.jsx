@@ -31,8 +31,8 @@ const Card = styled(motion.div)`
     overflow: hidden;
     display: block;
     /* width: 600px; */
-    min-width: 400px;
-    width: 400px;
+    min-width: 380px;
+    width: 380px;
     padding: 1rem;
     box-shadow: 6px 6px 0px #8296e178;
     justify-content: space-between;
