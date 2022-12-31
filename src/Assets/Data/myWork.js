@@ -3,6 +3,7 @@ import irPic from "../Images/ir.png"
 import fruits from "../Images/fruits.png"
 import amazon from "../Images/amazon.png"
 import iota from "../Images/iota.jpeg"
+import olx from "../Images/olx_clone.png"
 
 const projects = [
     {
@@ -11,6 +12,13 @@ const projects = [
         github: "https://github.com/varunmukherjee1/Attendance-Manager",
         website: "",
         desc: "Automated attendance capturing and management system"
+    },
+    {
+        title: "OLX Clone",
+        img: olx,
+        github: "https://github.com/varunmukherjee1/Olx_Clone",
+        website: "https://elaborate-gecko-8b697d.netlify.app/",
+        desc: "Full Stack Olx clone using 'Next.js'"
     },
     {
         title: "Sci Search",
