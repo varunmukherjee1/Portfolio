@@ -100,6 +100,10 @@ const Box = styled.div`
     object-fit: cover;
     margin: 0 1.5rem;
   }
+
+  &>div:nth-of-type(3) img:nth-of-type(4) {
+    height: 55px;
+  }
 `
 
 // Framer-motion config

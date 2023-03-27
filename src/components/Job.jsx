@@ -14,7 +14,7 @@ function Job(props) {
                 <p>{props.job.company}</p>
             </div>
             <div>
-                <a href = {props.job.website} target = "_blank" rel="noreferrer">Website</a>
+                {props.job.website !== undefined && <a href = {props.job.website} target = "_blank" rel="noreferrer">Website</a>}
             </div>
         </Desc>
         <Tag>

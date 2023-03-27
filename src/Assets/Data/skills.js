@@ -17,10 +17,11 @@ import js from "../Images/js.png"
 import sass from "../Images/sass.png"
 import nextjs from "../Images/nextjs.png"
 import bootstrap from "../Images/bootstrap.png"
+import lyra from "../Images/lyra-shadowed.png"
 
 const languages =[js,c_cpp,sql,java,git,html,css,python,sass]
 const lib = [node,react,redux,bootstrap,nextjs]
-const tools = [github,solr,vsc]
+const tools = [github,solr,vsc,lyra]
 const database = [mysql,mongo]
 
 const obj = {

@@ -3,7 +3,9 @@ import irPic from "../Images/ir.png"
 import fruits from "../Images/fruits.png"
 import amazon from "../Images/amazon.png"
 import iota from "../Images/iota.jpeg"
+import swaggertoof from "../Images/swaggertoof_icon.jpg"
 import olx from "../Images/olx_clone.png"
+import noImage from "../Images/no-image-available.png"
 
 const projects = [
     {
@@ -49,8 +51,22 @@ const experience = [
         img: iota,
         website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
         company: "IOTA (Project Club of IIIT Sri City)",
-        tag: "Present"
-    }
+        tag: "Dec 2022 - Present"
+    },
+    {
+        title: "Frontend Developer (Next.js)",
+        img: noImage,
+        // website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
+        company: "Unhired",
+        tag: "Jan 2023 - Present"
+    },
+    {
+        title: "Frontend Developer (Freelance)",
+        img: swaggertoof,
+        // website: "https://6308fa0da14bb108b40e25f6--lucent-treacle-c65023.netlify.app/",
+        company: "Swaggertoof",
+        tag: "Aug 2022 - Sep 2022"
+    },
 ]
 
 const obj = {

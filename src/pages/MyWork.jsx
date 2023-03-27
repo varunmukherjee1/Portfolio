@@ -13,7 +13,7 @@ import myWork from '../Assets/Data/myWork';
 // import spinner from "../Assets/Images/spinner.png"
 
 function MyWork() {
-  const [tab, setTab] = useState('projects');
+  const [tab, setTab] = useState('experience');
 
   // const spinRef = useRef();
   const scrollRef = useRef();
@@ -23,7 +23,7 @@ function MyWork() {
   };
 
   const showExp = () => {
-    setTab('exp');
+    setTab('experience');
   };
 
   return (
