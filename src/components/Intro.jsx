@@ -40,7 +40,7 @@ function Intro() {
                 animate = {{opacity: 1}}
                 transition = {{type: "spring",duration: 0.5, delay: 1.5}}
             >
-                <a href="https://drive.google.com/file/d/1RB0ES_tS-6pw64xas6qo_Ehmdxm9AeEv/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
+                <a href="https://drive.google.com/file/d/10XvNcYaf3lzeXFlSOQwQKbBiQME2umL8/view?usp=share_link" target= "_blank" rel="noreferrer"> My Resume</a>
             </motion.div>
         </SubBox>
         <SubBox>
