@@ -22,8 +22,8 @@ import ts from "../Images/typescript.svg"
 import tailwind from "../Images/tailwind-css-icon.svg"
 
 const languages =[js,c_cpp,sql,java,git,html,css,python,sass,ts]
-const lib = [node,react,redux,bootstrap,nextjs,tailwind]
-const tools = [github,solr,vsc,orama]
+const lib = [node,react,redux,bootstrap,nextjs,tailwind,orama]
+const tools = [github,solr,vsc]
 const database = [mysql,mongo]
 
 const obj = {
