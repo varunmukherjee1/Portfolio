@@ -98,7 +98,10 @@ const Box = styled.div`
   &>div img {
     height: 50px;
     object-fit: cover;
-    margin: 0 1.5rem;
+    margin: 0.3rem 1.5rem;
+    border-radius: 6px;
+    object-fit: contain;
+    overflow: hidden;
   }
 
   &>div:nth-of-type(3) img:nth-of-type(4) {

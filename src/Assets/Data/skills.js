@@ -17,11 +17,13 @@ import js from "../Images/js.png"
 import sass from "../Images/sass.png"
 import nextjs from "../Images/nextjs.png"
 import bootstrap from "../Images/bootstrap.png"
-import lyra from "../Images/lyra-shadowed.png"
+import orama from "../Images/orama.jpeg"
+import ts from "../Images/typescript.svg"
+import tailwind from "../Images/tailwind-css-icon.svg"
 
-const languages =[js,c_cpp,sql,java,git,html,css,python,sass]
-const lib = [node,react,redux,bootstrap,nextjs]
-const tools = [github,solr,vsc,lyra]
+const languages =[js,c_cpp,sql,java,git,html,css,python,sass,ts]
+const lib = [node,react,redux,bootstrap,nextjs,tailwind]
+const tools = [github,solr,vsc,orama]
 const database = [mysql,mongo]
 
 const obj = {
