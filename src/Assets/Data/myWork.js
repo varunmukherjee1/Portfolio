@@ -1,6 +1,7 @@
 import attPic from "../Images/attendance.png"
 import irPic from "../Images/ir.png"
 import fruits from "../Images/fruits.png"
+import nextRandom from "../Images/next_nr.png"
 import amazon from "../Images/amazon.png"
 import iota from "../Images/iota.jpeg"
 import swaggertoof from "../Images/swaggertoof_icon.jpg"
@@ -21,6 +22,13 @@ const projects = [
         github: "https://github.com/varunmukherjee1/Olx_Clone",
         website: "https://elaborate-gecko-8b697d.netlify.app/",
         desc: "Full Stack Olx clone using 'Next.js'"
+    },
+    {
+        title: "Next Random",
+        img: nextRandom,
+        github: "https://github.com/varunmukherjee1/Next_Random",
+        website: "https://next-random-b6hfqbjef-varunmukherjee1.vercel.app/",
+        desc: "Mini social media app to share your random thoughts"
     },
     {
         title: "Sci Search",
