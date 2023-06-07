@@ -27,8 +27,8 @@ const projects = [
         title: "Next Random",
         img: nextRandom,
         github: "https://github.com/varunmukherjee1/Next_Random",
-        website: "https://next-random-b6hfqbjef-varunmukherjee1.vercel.app/",
-        desc: "Mini social media app to share your random thoughts"
+        website: "https://next-random-kappa.vercel.app/",
+        desc: "A user-friendly website enabling individuals to share diverse thoughts and ideas."
     },
     {
         title: "Sci Search",
