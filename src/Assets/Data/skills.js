@@ -20,10 +20,11 @@ import bootstrap from "../Images/bootstrap.png"
 import orama from "../Images/orama.jpeg"
 import ts from "../Images/typescript.svg"
 import tailwind from "../Images/tailwind-css-icon.svg"
+import appscript from "../Images/appscript.png"
 
 const languages =[js,c_cpp,sql,java,git,html,css,python,sass,ts]
 const lib = [node,react,redux,bootstrap,nextjs,tailwind,orama]
-const tools = [github,solr,vsc]
+const tools = [github,solr,vsc,appscript]
 const database = [mysql,mongo]
 
 const obj = {

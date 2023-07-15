@@ -40,7 +40,7 @@ function SocialLinks(props) {
             animate = {{scale: [0,1,1.5,1]}}
             transition = {{type: "spring" , duration: 1, delay: 1.6}}
         >
-            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://leetcode.com/varunmukherjee/">
+            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://leetcode.com/varunmukherjee1/">
                 <i className ="fa-solid fa-code"></i>
             </a>
         </motion.div>

@@ -7,6 +7,7 @@ import iota from "../Images/iota.jpeg"
 import swaggertoof from "../Images/swaggertoof_icon.jpg"
 import olx from "../Images/olx_clone.png"
 import noImage from "../Images/no-image-available.png"
+import polymath from "../Images/polymathai.jpeg"
 
 const projects = [
     {
@@ -55,6 +56,13 @@ const projects = [
 
 const experience = [
     {
+        title: "Next.js Developer",
+        img: polymath,
+        website: "https://trypolymath.ai/",
+        company: "Polymath AI",
+        tag: "July 2023 - Present"
+    },
+    {
         title: "Hackathon & Workshop Team LeadHackathon",
         img: iota,
         website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
@@ -66,7 +74,7 @@ const experience = [
         img: noImage,
         // website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
         company: "Unhired",
-        tag: "Jan 2023 - Present"
+        tag: "Jan 2023 - May 2023"
     },
     {
         title: "Frontend Developer (Freelance)",
