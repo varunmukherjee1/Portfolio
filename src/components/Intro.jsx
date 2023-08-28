@@ -25,7 +25,7 @@ function Intro() {
                     <div>I am,</div>
                     <Typewriter
                         options={{
-                            strings: ['MERN Stack Developer', 'Web 3 Enthusiast'],
+                            strings: ['MERN Stack Developer','Exploring AI','Web 3 Enthusiast'],
                             autoStart: true,
                             loop: true,
                         }}

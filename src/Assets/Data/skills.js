@@ -21,10 +21,11 @@ import orama from "../Images/orama.jpeg"
 import ts from "../Images/typescript.svg"
 import tailwind from "../Images/tailwind-css-icon.svg"
 import appscript from "../Images/appscript.png"
+import openAi from "../Images/OpenAI_icon.svg"
 
 const languages =[js,c_cpp,sql,java,git,html,css,python,sass,ts]
 const lib = [node,react,redux,bootstrap,nextjs,tailwind,orama]
-const tools = [github,solr,vsc,appscript]
+const tools = [github,solr,vsc,appscript,openAi]
 const database = [mysql,mongo]
 
 const obj = {

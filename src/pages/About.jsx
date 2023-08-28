@@ -29,11 +29,12 @@ function About() {
         </Gif>
 
         <Box>
-          I'm a Full Stack (MERN) Developer located in India. I love to create simple yet beautiful websites.
+          Imagine a developer who doesn't just build websites and tools, but crafts experiences that leave users in awe -that's me! 😁
           <br /><br />
-          I'm interested in the whole web development Like learning and trying new things and building great projects. I love to watch Anime 😅 and read Books.
+          I'm not just a Full Stack Developer; I'm a tech enthusiast. I've spent over a year in the dynamic world of web development, honing my skills to deliver seamless, user-centric solutions.<br/>
+          I love to watch Anime 😅 and read Books.
           <br /><br />
-          I believe in always trying to be better than yesterday, working hard, learning new tech stacks working with them, and always looking for opportunities to upskill myself.
+          I believe in the constant pursuit of growth, pushing myself to exceed my limits. 
           <br />
           "🚩 Better Than Yesterday"
         </Box>
