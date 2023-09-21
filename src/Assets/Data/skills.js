@@ -22,10 +22,12 @@ import ts from "../Images/typescript.svg"
 import tailwind from "../Images/tailwind-css-icon.svg"
 import appscript from "../Images/appscript.png"
 import openAi from "../Images/OpenAI_icon.svg"
+import fastapi from "../Images/fastapi.svg"
+import firebase from "../Images/firebase-2.svg"
 
 const languages =[js,c_cpp,sql,java,git,html,css,python,sass,ts]
-const lib = [node,react,redux,bootstrap,nextjs,tailwind,orama]
-const tools = [github,solr,vsc,appscript,openAi]
+const lib = [node,react,redux,bootstrap,nextjs,tailwind,orama, fastapi]
+const tools = [github,solr,vsc,appscript,openAi,firebase]
 const database = [mysql,mongo]
 
 const obj = {
