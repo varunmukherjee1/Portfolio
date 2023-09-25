@@ -56,7 +56,7 @@ const projects = [
 
 const experience = [
     {
-        title: "Next.js Developer",
+        title: "Next.js Developer (Full Stack)",
         img: polymath,
         website: "https://trypolymath.ai/",
         company: "Polymath AI",
@@ -70,7 +70,7 @@ const experience = [
         tag: "Dec 2022 - Present"
     },
     {
-        title: "Frontend Developer (Next.js)",
+        title: "Next.js Developer",
         img: noImage,
         // website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
         company: "Unhired",
