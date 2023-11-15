@@ -8,6 +8,7 @@ import swaggertoof from "../Images/swaggertoof_icon.jpg"
 import olx from "../Images/olx_clone.png"
 import noImage from "../Images/no-image-available.png"
 import polymath from "../Images/polymathai.jpeg"
+import project_mgmt from "../Images/project_mgmt.png"
 
 const projects = [
     {
@@ -25,18 +26,25 @@ const projects = [
         desc: "Full Stack Olx clone using 'Next.js'"
     },
     {
-        title: "Next Random",
-        img: nextRandom,
-        github: "https://github.com/varunmukherjee1/Next_Random",
-        website: "https://next-random-kappa.vercel.app/",
-        desc: "A user-friendly website enabling individuals to share diverse thoughts and ideas."
-    },
-    {
         title: "Sci Search",
         img: irPic,
         github: "https://github.com/varunmukherjee1/Information_Retrieval",
         website: "",
         desc: "Scientific Document Retreival System"
+    },
+    {
+        title: "Project Management System",
+        img: project_mgmt,
+        github: "https://github.com/varunmukherjee1/Simple_Project_Management_System",
+        website: "",
+        desc: "Simple fullstack project management system using MongoDB & GraphQL"
+    },
+    {
+        title: "Next Random",
+        img: nextRandom,
+        github: "https://github.com/varunmukherjee1/Next_Random",
+        website: "https://next-random-kappa.vercel.app/",
+        desc: "A user-friendly website enabling individuals to share diverse thoughts and ideas."
     },
     {
         title: "Fruit's Basket",
