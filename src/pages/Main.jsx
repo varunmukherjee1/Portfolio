@@ -54,7 +54,7 @@ function Main() {
           </motion.h3>
         </Contact>
 
-        <Experience to = "/mywork">
+        <Experience click = {click} to = "/mywork">
           <motion.h3
             initial = {{
               y: -200,
@@ -161,9 +161,7 @@ const Experience = styled(NavLink)`
 
   @media(max-width: 600px){
     &>h3 {
-      background-color: ${props => props.theme.body};
-      border-radius: 5px;
-      padding: 1px;
+      color: ${props => props.click? props.theme.body:props.theme.text};
     }
   }
 `
@@ -271,7 +269,7 @@ const DarkDiv = styled.div`
 
   @media (max-width: 600px) {
     width: 100%;
-    height: ${props => props.click? "50%":"0%"};
+    height: ${props => props.click? "56%":"0%"};
     right: 0;
   }
 `

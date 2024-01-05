@@ -13,15 +13,15 @@ function Intro() {
         animate = {{height: "55vh"}}
         transition = {{type: "spring", duration: 2, delay: 1}}
     >
-        <SubBox>
+        <SubBox className = "sub_box_1">
             <Text
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition = {{type: "spring",duration: 0.5, delay: 1.5}}
             >
-                <h1>Hi,</h1>
-                <h3>I'm Varun Mukherjee</h3>
-                <h6>
+                <h3>Hi,</h3>
+                <h2>I'm Varun Mukherjee</h2>
+                <h5>
                     <div>I am,</div>
                     <Typewriter
                         options={{
@@ -30,7 +30,7 @@ function Intro() {
                             loop: true,
                         }}
                     />
-                </h6>
+                </h5>
 
             </Text>
             
@@ -43,7 +43,7 @@ function Intro() {
                 <a href="https://drive.google.com/file/d/1TGGje9bRQrghPsaSgYEqa2UfL9yL5HrO/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
             </motion.div>
         </SubBox>
-        <SubBox>
+        <SubBox className = "sub_box_2">
             <motion.div
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
@@ -83,11 +83,25 @@ const Box = styled(motion.div)`
     border-left: 2px solid ${props => props.theme.body};
     border-right: 2px solid ${props => props.theme.text};
     z-index: 1;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        height: 60vh;
+
+        .sub_box_1{
+            height: 55%;
+        }
+
+        .sub_box_2{
+            height: 45%;
+        }
+    }
         
 `
 
 const SubBox = styled.div`
     width: 50%;
+    display: block;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -133,12 +147,38 @@ const SubBox = styled.div`
         flex-direction: column;
         gap: 1rem;
     }
+
+    @media (max-width: 600px){
+        width: 100%;
+
+        .button-container {
+            justify-content: flex-start;
+            margin-left: 0.5rem;
+        }
+    
+
+        .button-container a {
+            padding: 8px 1.8rem;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0rem;
+            margin-top: 1rem;    
+        }
+
+        .pic{
+            position: absolute;
+            bottom: 0;
+            left: 72%;
+            width: 63%;
+            height: auto;
+        }
+    }
 `
 
 const Text = styled(motion.div)`
-    font-size: calc(1em + 1.5vw);
+    font-size: calc(1rem + 1.5vw);
     color: ${props => props.theme.body};
-    padding: 2rem;
+    padding: 0.5rem;
     cursor: pointer;
 
     display: flex;
@@ -148,12 +188,12 @@ const Text = styled(motion.div)`
     &>*:last-child{
         color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};
         font-weight: 500;
-        font-size: calc(0.5rem + 1.5vw);
+        font-size: calc(0.7rem + 1.5vw);
         display: flex;
         gap: 3px;
     }
 
-    h6>div:last-child {
+    h5>div:last-child {
         color: #8296e1;
     }
 
