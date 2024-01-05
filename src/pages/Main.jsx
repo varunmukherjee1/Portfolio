@@ -37,7 +37,7 @@ function Main() {
           <span>Click Here</span>
         </Center>
 
-        <Contact to = "/contact">
+        <Contact click = {click} to = "/contact">
           <motion.h3
             initial = {{
               y: -200,
@@ -50,7 +50,7 @@ function Main() {
             whileHover = {{scale: 1.1, fontWeight: 700, color: "#4F98CA"}}
             whileTap = {{scale: 0.9}}
           >
-            Get In Touch...
+            Contact Me
           </motion.h3>
         </Contact>
 
@@ -140,19 +140,32 @@ const Contact = styled(NavLink)`
   z-index: 1;
   font-size: 1.3rem;
   font-weight: 600;
+
+  @media(max-width: 600px){
+    &>h3 {
+      color: ${props => props.click? props.theme.body:props.theme.text};
+    }
+  }
 `
 
 const Experience = styled(NavLink)`
   color: ${props => props.theme.text};
   position: absolute;
-  top: 2rem;
   top: 50%;
-  right: calc(1rem);
+  right: 0px;
   transform: rotate(90deg) translate(-50%,-50%);
   text-decoration: none;
   z-index: 1;
   font-size: 1.3rem;
   font-weight: 600;
+
+  @media(max-width: 600px){
+    &>h3 {
+      background-color: ${props => props.theme.body};
+      border-radius: 5px;
+      padding: 1px;
+    }
+  }
 `
 
 const BottomBar = styled.div`
@@ -171,6 +184,10 @@ const About = styled(NavLink)`
   text-decoration: none;
   font-size: 1.3rem;
   z-index: 1;
+
+  @media (max-width: 600px) {
+    color: ${props => props.theme.text};
+  }
 `
 
 const Skills = styled(NavLink)`
