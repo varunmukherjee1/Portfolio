@@ -9,6 +9,7 @@ import olx from "../Images/olx_clone.png"
 import noImage from "../Images/no-image-available.png"
 import polymath from "../Images/polymathai.jpeg"
 import project_mgmt from "../Images/project_mgmt.png"
+import motive_logo from "../Images/motive_logo.png"
 
 const projects = [
     {
@@ -64,18 +65,25 @@ const projects = [
 
 const experience = [
     {
+        title: "Software Engineer Intern",
+        img: motive_logo,
+        website: "https://gomotive.com/",
+        company: "Motive",
+        tag: "Jan 2024 - Present"
+    },
+    {
         title: "Next.js Developer (Full Stack)",
         img: polymath,
         website: "https://trypolymath.ai/",
         company: "Polymath AI",
-        tag: "July 2023 - Present"
+        tag: "July 2023 - Jan 2024"
     },
     {
         title: "Hackathon & Workshop Team LeadHackathon",
         img: iota,
         website: "https://www.linkedin.com/company/iota-iiits/mycompany/",
         company: "IOTA (Project Club of IIIT Sri City)",
-        tag: "Dec 2022 - Present"
+        tag: "Dec 2022 - Jan 2024"
     },
     {
         title: "Next.js Developer",

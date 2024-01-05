@@ -36,16 +36,16 @@ function MyWork() {
       <Tabs>
         <Header>
           <h3
-            className={`${tab === 'projects' ? 'active' : ''}`}
-            onClick={showProjects}
-          >
-            Projects
-          </h3>
-          <h3
             className={`${tab === 'projects' ? '' : 'active'}`}
             onClick={showExp}
           >
             Expreience
+          </h3>
+          <h3
+            className={`${tab === 'projects' ? 'active' : ''}`}
+            onClick={showProjects}
+          >
+            Projects
           </h3>
         </Header>
         <Body ref = {scrollRef}>
