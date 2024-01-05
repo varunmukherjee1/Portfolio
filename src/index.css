@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ref_link_icon {
+  @media (max-width: 600px) {
+    color: #272727 !important;
+  }
+}

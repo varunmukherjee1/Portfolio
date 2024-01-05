@@ -253,8 +253,8 @@ const DarkDiv = styled.div`
               width 1s ease 0.5s;
 
   @media (max-width: 600px) {
-    height: 50%;
     width: 100%;
+    height: ${props => props.click? "50%":"0%"};
     right: 0;
   }
 `

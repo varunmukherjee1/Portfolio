@@ -13,7 +13,7 @@ function SocialLinks(props) {
             animate = {{scale: [0,1,1.5,1]}}
             transition = {{type: "spring" , duration: 1, delay: 1}}
         >
-            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://github.com/varunmukherjee1">
+            <a className = "ref_link_icon" style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://github.com/varunmukherjee1">
                 <i className="fa-brands fa-github"></i>
             </a>
         </motion.div>
@@ -22,7 +22,7 @@ function SocialLinks(props) {
             animate = {{scale: [0,1,1.5,1]}}
             transition = {{type: "spring" , duration: 1, delay: 1.2}}
         >
-            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://codepen.io/varunmukherjee1">
+            <a className = "ref_link_icon" style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://codepen.io/varunmukherjee1">
                 <i className ="fa-brands fa-codepen"></i>
             </a>
         </motion.div>
@@ -31,7 +31,7 @@ function SocialLinks(props) {
             animate = {{scale: [0,1,1.5,1]}}
             transition = {{type: "spring" , duration: 1, delay: 1.4}}
         >
-            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://www.linkedin.com/in/varun-mukherjee-a68a121ba/">
+            <a className = "ref_link_icon" style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://www.linkedin.com/in/varun-mukherjee-a68a121ba/">
                 <i className="fa-brands fa-linkedin-in"></i>
             </a>
         </motion.div>
@@ -40,7 +40,7 @@ function SocialLinks(props) {
             animate = {{scale: [0,1,1.5,1]}}
             transition = {{type: "spring" , duration: 1, delay: 1.6}}
         >
-            <a style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://leetcode.com/varunmukherjee1/">
+            <a className = "ref_link_icon" style = {{color: `${props.color === "dark"? darkTheme.text:darkTheme.body}`}} target = "_blank" rel="noreferrer" href = "https://leetcode.com/varunmukherjee1/">
                 <i className ="fa-solid fa-code"></i>
             </a>
         </motion.div>
@@ -90,6 +90,10 @@ const Line = styled(motion.span)`
     width: 3px;
     height: 8rem;
     background-color: ${props => props.color === "dark"? darkTheme.text:darkTheme.body};
+
+    @media (max-width: 600px) {
+        background-color: ${darkTheme.body};
+    }
 `
 
 export default SocialLinks
