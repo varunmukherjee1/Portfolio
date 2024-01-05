@@ -251,6 +251,12 @@ const DarkDiv = styled.div`
   z-index: 1;
   transition: height 0.5s ease,
               width 1s ease 0.5s;
+
+  @media (max-width: 600px) {
+    height: 50%;
+    width: 100%;
+    right: 0;
+  }
 `
 
 // Framer-motion config
