@@ -75,7 +75,7 @@ const Box = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
-  width: 50vw;
+  width: 62vw;
   height: 60vh;
   z-index: 3;
   line-height: 1.5;
@@ -90,6 +90,12 @@ const Box = styled.div`
   top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+
+  @media(max-width: 600px){
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+  }
 `
 
 // Framer-motion config
