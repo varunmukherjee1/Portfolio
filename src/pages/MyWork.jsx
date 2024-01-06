@@ -82,8 +82,8 @@ const Tabs = styled.div`
   /* height: auto; */
   padding: 0.5rem;
 
-  @media(max-width: 400px){
-    margin-top: 2.5rem;
+  @media(max-width: 460px){
+    margin-top: 2.3rem;
   }
 `;
 
@@ -139,6 +139,22 @@ const Body = styled.div`
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #272727;
+  }
+
+  @media(max-width: 460px){
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 73vh;
+    gap: 0;
+    padding: 0px;
+    align-items: center;
+    justify-content: flex-start;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
   }
 `;
 
