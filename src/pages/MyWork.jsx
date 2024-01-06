@@ -81,6 +81,10 @@ const Tabs = styled.div`
   width: 70vw;
   /* height: auto; */
   padding: 0.5rem;
+
+  @media(max-width: 400px){
+    margin-top: 2.5rem;
+  }
 `;
 
 const Header = styled.div`

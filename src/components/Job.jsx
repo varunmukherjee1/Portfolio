@@ -31,8 +31,8 @@ const Card = styled(motion.div)`
     overflow: hidden;
     display: block;
     /* width: 600px; */
-    min-width: 380px;
-    width: 380px;
+    min-width: 280px;
+    width: 280px;
     padding: 1rem;
     box-shadow: 6px 6px 0px #8296e178;
     justify-content: space-between;
@@ -83,8 +83,8 @@ const Desc = styled.div`
     & > *:last-child a {
     text-decoration: none;
     font-size: 1.2rem;
-    margin-top: 28px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 25px;
     padding: 10px 40px;
     background: #8296e1;
     color: #fff;

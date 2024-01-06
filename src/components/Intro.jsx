@@ -20,7 +20,7 @@ function Intro() {
                 transition = {{type: "spring",duration: 0.5, delay: 1.5}}
             >
                 <h3>Hi,</h3>
-                <h2>I'm Varun Mukherjee</h2>
+                <h3>I'm Varun Mukherjee</h3>
                 <h5>
                     <div>I am,</div>
                     <Typewriter
@@ -40,7 +40,7 @@ function Intro() {
                 animate = {{opacity: 1}}
                 transition = {{type: "spring",duration: 0.5, delay: 1.5}}
             >
-                <a href="https://drive.google.com/file/d/1TGGje9bRQrghPsaSgYEqa2UfL9yL5HrO/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
+                <a href="https://drive.google.com/file/d/1jfQS9AKS18Nrjw_Foxiryyc0bB0D2BLZ/view?usp=sharing" target= "_blank" rel="noreferrer"> My Resume</a>
             </motion.div>
         </SubBox>
         <SubBox className = "sub_box_2">

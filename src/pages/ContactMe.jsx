@@ -46,14 +46,14 @@ function ContactMe() {
       <SocialLinks/>
       <HomeButton/>
 
-      <motion.img 
+      {/* <motion.img 
         src= {emailPng} 
         alt="email" 
 
         initial = {{opacity: 0}}
         animate = {{opacity: 1}}
         transition = {{type: "spring", duration: 1.5, delay: 0.5}}      
-      />
+      /> */}
 
       <Box
         initial = {{height: 0}}
@@ -94,7 +94,7 @@ const Container = styled(motion.div)`
     width: 70px;
     position: absolute;
     left: 50%;
-    top: 13%;
+    bottom: 0%;
     transform: translate(-50%,-0%);
     z-index: 1;
   }
@@ -102,7 +102,7 @@ const Container = styled(motion.div)`
 
 const Box = styled(motion.div)`
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
   border: 3px solid ${props => props.theme.text};
