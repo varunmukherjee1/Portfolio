@@ -56,15 +56,20 @@ const Card = styled(motion.div)`
 
   @media(min-width: 461px){
     overflow:hidden;
-}
+  }
 
-@media(max-width: 460px){
-    margin-right: 0;
-    min-width: 100%;
-    width: 100%;
-    transform: scale(0.8) !important;
-    margin-bottom: -3.2rem;
-}
+  @media(max-width: 460px){
+      margin-right: -1.8rem;
+      min-width: 100%;
+      width: 100%;
+      transform: scale(0.8) !important;
+      margin-bottom: -3.2rem;
+  }
+
+  @media(max-width: 400px){
+    margin-right: -1rem;
+    margin-bottom: -4.3rem;
+  }
 `;
 
 const Desc = styled.div`

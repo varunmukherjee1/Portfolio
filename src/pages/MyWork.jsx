@@ -78,12 +78,19 @@ const Tabs = styled.div`
   top: 20rem;
   left: 50%;
   transform: translate(-50%, calc(-50% + 20px));
-  width: 70vw;
-  /* height: auto; */
+  width: 80vw;
   padding: 0.5rem;
+
+  @media(max-width: 700px) {
+    width: 75vw;
+  }
 
   @media(max-width: 460px){
     margin-top: 2.3rem;
+  }
+
+  @media(max-width: 400px){
+    margin-top: 8rem;
   }
 `;
 
@@ -113,7 +120,7 @@ const Body = styled.div`
   overflow-y: hidden;
   padding: 1rem;
   display: flex;
-  width: auto;
+  width: 100%;
 
   &::-webkit-scrollbar {
     /* display: none; */
@@ -146,15 +153,19 @@ const Body = styled.div`
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
-    max-height: 73vh;
+    max-height: 77vh;
     gap: 0;
     padding: 0px;
-    align-items: center;
+    align-items: center !important;
     justify-content: flex-start;
 
     &::-webkit-scrollbar {
-      width: 8px;
+      width: 4px;
     }
+  }
+
+  @media(max-width: 400px){
+    max-height: 81vh;
   }
 `;
 
